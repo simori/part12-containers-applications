@@ -1,0 +1,98 @@
+root@8851a0e8ecb9:/# mkdir /usr/src/app
+root@8851a0e8ecb9:/# touch /usr/src/app/index.js
+root@8851a0e8ecb9:/# cd /usr/src/app
+root@8851a0e8ecb9:/usr/src/app# ls
+index.js
+root@8851a0e8ecb9:/usr/src/app# cd
+root@8851a0e8ecb9:~# exit
+exit
+root@8851a0e8ecb9:/# script exercise12_3.txt
+Script started, output log file is 'exercise12_3.txt'.
+# nano /usr/src/app/index.js
+sh: 1: nano: not found
+# apt-get update
+Get:1 http://archive.ubuntu.com/ubuntu jammy InRelease [270 kB]
+Get:2 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]           
+Get:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [114 kB]             
+Get:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [99.8 kB]
+Get:5 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [266 kB]
+Get:6 http://archive.ubuntu.com/ubuntu jammy/restricted amd64 Packages [164 kB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [17.5 MB]
+Get:8 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [352 kB]
+Get:9 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [4644 B]
+Get:10 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [384 kB]
+Get:11 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [426 kB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy/main amd64 Packages [1792 kB]                                            
+Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [533 kB]                                 
+Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [756 kB]                                     
+Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [426 kB]                               
+Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [8056 B]                               
+Get:17 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [3175 B]                                   
+Get:18 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [7272 B]                               
+Fetched 23.2 MB in 13s (1785 kB/s)                                                                                     
+Reading package lists... Done
+# apt-get -y instal nano
+E: Invalid operation instal
+# apt-get -y install nano
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Suggested packages:
+  hunspell
+The following NEW packages will be installed:
+  nano
+0 upgraded, 1 newly installed, 0 to remove and 8 not upgraded.
+Need to get 280 kB of archives.
+After this operation, 881 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 nano amd64 6.2-1 [280 kB]
+Fetched 280 kB in 0s (831 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package nano.
+(Reading database ... 4395 files and directories currently installed.)
+Preparing to unpack .../archives/nano_6.2-1_amd64.deb ...
+Unpacking nano (6.2-1) ...
+Setting up nano (6.2-1) ...
+update-alternatives: using /bin/nano to provide /usr/bin/editor (editor) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/editor.1.gz because associated file /usr/share/man/man1/nano.1.gz (of link group editor) doesn't exist
+update-alternatives: using /bin/nano to provide /usr/bin/pico (pico) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/pico.1.gz because associated file /usr/share/man/man1/nano.1.gz (of link group pico) doesn't exist
+# nano /usr/src/app/index.js
+# exit
+Script done.
+root@8851a0e8ecb9:/# nano exercise12_3.txt
+  GNU nano 6.2                                                exercise12_3.txt                                                          
+^M^M0% [1 InRelease 204 kB/270 kB 76%] [2 InRelease>
+^M0% [3 InRelease 4087 B/114 kB 4%] [2 InRelease 14.3 kB/110 kB 13%]^M0% [3 InRelease 114 kB/114 kB 100%] [2 InRelease 31.8 kB/110 kB2>
+^M0% [4 InRelease 4088 B/99.8 kB 4%] [2 InRelease 43.5 kB/110 kB 39%]^M0% [4 InRelease 96.1 kB/99.8 kB 96%] [2 InRelease 49.3 kB/110 kB>
+^M0% [5 Packages 15.9 kB/266 kB 6%] [2 InRelease 72.7 kB/110 kB 66%]^M0% [5 Packages 81.6 kB/266 kB 31%] [2 InRelease 87.3 kB/110 kB 79>
+^M0% [6 Packages 43.4 kB/164 kB 26%]^M0% [5 Packages store 0 B] [6 Packages 43.4 kB/164 kB 26%]^M15% [5 Packages store 0 B] [6 Packages>
+^M16% [7 Packages 25.0 kB/17.5 MB 0%] [Waiting for headers]^M16% [6 Packages store 0 B] [7 Packages 25.0 kB/17.5 MB 0%] [Waiting for he>
+^M17% [7 Packages 101 kB/17.5 MB 1%] [8 Packages 2711 B/352 kB 1%]^M21% [7 Packages 923 kB/17.5 MB 5%] [8 Packages 283 kB/352 kB 80%]^M>
+^M24% [7 Packages 1415 kB/17.5 MB 8%] [9 Packages 2714 B/4644 B 58%]^M>
+^M24% [7 Packages 1421 kB/17.5 MB 8%] [10 Packages 1251 B/384 kB 0%]^M28% [7 Packages 2221 kB/17.5 MB 13%] [10 Packages 277 kB/384 kB7>
+^M30% [7 Packages 2621 kB/17.5 MB 15%] [11 Packages 6792 B/426 kB 2%]^M30% [10 Packages store 0 B] [7 Packages 2621 kB/17.5 MB 15%] [11>
+^M83% [12 Packages 361 B/1792 kB 0%]1799 kB/s 1s^M83% [7 Packa>
+^M90% [13 Packages 819 B/533 kB 0%]1799 kB/s 0s^M90% [12 Pack>
+^M93% [14 Packages 24.0 kB/756 kB 3%]1799 kB/s 0s^M93% [13 Pack>
+^M96% [15 Packages 27.6 kB/426 kB 6%]1774 kB/s 0s^M96% [14 Pack>
+^M98% [16 Packages 366 B/8056 B 5%]1774 kB/s 0s^M98% [15 Pack>
+^M98% [15 Packages store 0 B] [Waiting for headers]1774 kB/s 0s^M>
+^M98% [15 Packages store 0 B] [18 Packages 7272 B/7272 B 100%]1774 kB/s 0s^M98% [15 Pack>
+^MReading package lists... 0%^M^MReading package lists... 0%^M^MReading package lists... 0%^M^MReading package lists... 7%^M^MReadingp>
+# apt-get -y instal nano
+E: Invalid operation instal
+# ^[[A^[[D^H ^H^H ^H^H ^H^H ^H^H ^H^H ^H^H ^H^H ^Hapt-get -y install nano
+^MReading package lists... 0%^M^MReading package lists... 0%^M^MReading package lists... 0%^M^MReading package lists... 7%^M^MReadingp>
+^MBuilding dependency tree... 0%^M^MBuilding dependency tree... 0%^M^MBuilding dependency tree... 50%^M^MBuilding dependency tree... 50>
+^MReading state information... 0% ^M^MReading state information... 0%^M^MReading state information... Done^M
+Suggested packages:
+hunspell
+The following NEW packages will be installed:
+nano
+0 upgraded, 1 newly installed, 0 to remove and 8 not upgraded.
+^X Exit^R Read File     ^\ Replaces^U Paste^J Justify^/ Go To Line    M-E RedoM-6 CopyMarko>
+# nano /usr/src/app/index.js
+# nano /usr/src/app/index.js
+^[[?2004h^[[?1049h^[[22;0;0t^[[1;48r^[(B^[[m^[[4l^[[?7h^[[39;49m^[[?1h^[=^[[?1h^[=^[[?25l^[[39;49m^[(B^[[m^[[H^[[2J^[[46;54H^[(B^[[0;7m>
+
+Script done on 2022-09-23 10:56:10+00:00 [COMMAND_EXIT_CODE="0"]

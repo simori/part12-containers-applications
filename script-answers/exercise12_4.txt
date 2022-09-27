@@ -1,0 +1,273 @@
+root@8851a0e8ecb9:/# mkdir /usr/src/app
+root@8851a0e8ecb9:/# touch /usr/src/app/index.js
+root@8851a0e8ecb9:/# cd /usr/src/app
+root@8851a0e8ecb9:/usr/src/app# ls
+index.js
+root@8851a0e8ecb9:/usr/src/app# cd
+root@8851a0e8ecb9:~# exit
+exit
+root@8851a0e8ecb9:/# script exercise12_3.txt
+Script started, output log file is 'exercise12_3.txt'.
+# nano /usr/src/app/index.js
+sh: 1: nano: not found
+# apt-get update
+Get:1 http://archive.ubuntu.com/ubuntu jammy InRelease [270 kB]
+Get:2 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]           
+Get:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [114 kB]             
+Get:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [99.8 kB]
+Get:5 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [266 kB]
+Get:6 http://archive.ubuntu.com/ubuntu jammy/restricted amd64 Packages [164 kB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [17.5 MB]
+Get:8 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [352 kB]
+Get:9 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [4644 B]
+Get:10 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [384 kB]
+Get:11 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [426 kB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy/main amd64 Packages [1792 kB]                                            
+Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [533 kB]                                 
+Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [756 kB]                                     
+Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [426 kB]                               
+Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [8056 B]                               
+Get:17 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [3175 B]                                   
+Get:18 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [7272 B]                               
+Fetched 23.2 MB in 13s (1785 kB/s)                                                                                     
+Reading package lists... Done
+# apt-get -y instal nano
+E: Invalid operation instal
+# apt-get -y install nano
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Suggested packages:
+  hunspell
+The following NEW packages will be installed:
+  nano
+0 upgraded, 1 newly installed, 0 to remove and 8 not upgraded.
+Need to get 280 kB of archives.
+After this operation, 881 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 nano amd64 6.2-1 [280 kB]
+Fetched 280 kB in 0s (831 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package nano.
+(Reading database ... 4395 files and directories currently installed.)
+Preparing to unpack .../archives/nano_6.2-1_amd64.deb ...
+Unpacking nano (6.2-1) ...
+Setting up nano (6.2-1) ...
+update-alternatives: using /bin/nano to provide /usr/bin/editor (editor) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/editor.1.gz because associated file /usr/share/man/man1/nano.1.gz (of link group editor) doesn't exist
+update-alternatives: using /bin/nano to provide /usr/bin/pico (pico) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/pico.1.gz because associated file /usr/share/man/man1/nano.1.gz (of link group pico) doesn't exist
+# nano /usr/src/app/index.js
+# exit
+Script done.
+root@8851a0e8ecb9:/# nano exercise12_3.txt
+root@8851a0e8ecb9:/# script
+Script started, output log file is 'typescript'.
+# curl -sL https://deb.nodesource.com/setup_16.x | bash
+sh: 1: curl: not found
+# apt-get install -y curl
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  ca-certificates libbrotli1 libcurl4 libldap-2.5-0 libldap-common libnghttp2-14 libpsl5 librtmp1 libsasl2-2 libsasl2-modules
+  libsasl2-modules-db libssh-4 openssl publicsuffix
+Suggested packages:
+  libsasl2-modules-gssapi-mit | libsasl2-modules-gssapi-heimdal libsasl2-modules-ldap libsasl2-modules-otp libsasl2-modules-sql
+The following NEW packages will be installed:
+  ca-certificates curl libbrotli1 libcurl4 libldap-2.5-0 libldap-common libnghttp2-14 libpsl5 librtmp1 libsasl2-2 libsasl2-modules
+  libsasl2-modules-db libssh-4 openssl publicsuffix
+0 upgraded, 15 newly installed, 0 to remove and 8 not upgraded.
+Need to get 2968 kB of archives.
+After this operation, 7065 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 openssl amd64 3.0.2-0ubuntu1.6 [1184 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy/main amd64 ca-certificates all 20211016 [148 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy/main amd64 libnghttp2-14 amd64 1.43.0-1build3 [76.3 kB]
+Get:4 http://archive.ubuntu.com/ubuntu jammy/main amd64 libpsl5 amd64 0.21.0-1.2build2 [58.4 kB]
+Get:5 http://archive.ubuntu.com/ubuntu jammy/main amd64 publicsuffix all 20211207.1025-1 [129 kB]
+Get:6 http://archive.ubuntu.com/ubuntu jammy/main amd64 libbrotli1 amd64 1.0.9-2build6 [315 kB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy/main amd64 libsasl2-modules-db amd64 2.1.27+dfsg2-3ubuntu1 [20.8 kB]
+Get:8 http://archive.ubuntu.com/ubuntu jammy/main amd64 libsasl2-2 amd64 2.1.27+dfsg2-3ubuntu1 [53.9 kB]
+Get:9 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libldap-2.5-0 amd64 2.5.13+dfsg-0ubuntu0.22.04.1 [183 kB]
+Get:10 http://archive.ubuntu.com/ubuntu jammy/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2build4 [58.2 kB]
+Get:11 http://archive.ubuntu.com/ubuntu jammy/main amd64 libssh-4 amd64 0.9.6-2build1 [184 kB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libcurl4 amd64 7.81.0-1ubuntu1.4 [290 kB]
+Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 curl amd64 7.81.0-1ubuntu1.4 [194 kB]
+Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libldap-common all 2.5.13+dfsg-0ubuntu0.22.04.1 [15.9 kB]
+Get:15 http://archive.ubuntu.com/ubuntu jammy/main amd64 libsasl2-modules amd64 2.1.27+dfsg2-3ubuntu1 [57.5 kB]
+Fetched 2968 kB in 1s (2995 kB/s)          
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package openssl.
+(Reading database ... 4468 files and directories currently installed.)
+Preparing to unpack .../00-openssl_3.0.2-0ubuntu1.6_amd64.deb ...
+Unpacking openssl (3.0.2-0ubuntu1.6) ...
+Selecting previously unselected package ca-certificates.
+Preparing to unpack .../01-ca-certificates_20211016_all.deb ...
+Unpacking ca-certificates (20211016) ...
+Selecting previously unselected package libnghttp2-14:amd64.
+Preparing to unpack .../02-libnghttp2-14_1.43.0-1build3_amd64.deb ...
+Unpacking libnghttp2-14:amd64 (1.43.0-1build3) ...
+Selecting previously unselected package libpsl5:amd64.
+Preparing to unpack .../03-libpsl5_0.21.0-1.2build2_amd64.deb ...
+Unpacking libpsl5:amd64 (0.21.0-1.2build2) ...
+Selecting previously unselected package publicsuffix.
+Preparing to unpack .../04-publicsuffix_20211207.1025-1_all.deb ...
+Unpacking publicsuffix (20211207.1025-1) ...
+Selecting previously unselected package libbrotli1:amd64.
+Preparing to unpack .../05-libbrotli1_1.0.9-2build6_amd64.deb ...
+Unpacking libbrotli1:amd64 (1.0.9-2build6) ...
+Selecting previously unselected package libsasl2-modules-db:amd64.
+Preparing to unpack .../06-libsasl2-modules-db_2.1.27+dfsg2-3ubuntu1_amd64.deb ...
+Unpacking libsasl2-modules-db:amd64 (2.1.27+dfsg2-3ubuntu1) ...
+Selecting previously unselected package libsasl2-2:amd64.
+Preparing to unpack .../07-libsasl2-2_2.1.27+dfsg2-3ubuntu1_amd64.deb ...
+Unpacking libsasl2-2:amd64 (2.1.27+dfsg2-3ubuntu1) ...
+Selecting previously unselected package libldap-2.5-0:amd64.
+Preparing to unpack .../08-libldap-2.5-0_2.5.13+dfsg-0ubuntu0.22.04.1_amd64.deb ...
+Unpacking libldap-2.5-0:amd64 (2.5.13+dfsg-0ubuntu0.22.04.1) ...
+Selecting previously unselected package librtmp1:amd64.
+Preparing to unpack .../09-librtmp1_2.4+20151223.gitfa8646d.1-2build4_amd64.deb ...
+Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2build4) ...
+Selecting previously unselected package libssh-4:amd64.
+Preparing to unpack .../10-libssh-4_0.9.6-2build1_amd64.deb ...
+Unpacking libssh-4:amd64 (0.9.6-2build1) ...
+Selecting previously unselected package libcurl4:amd64.
+Preparing to unpack .../11-libcurl4_7.81.0-1ubuntu1.4_amd64.deb ...
+Unpacking libcurl4:amd64 (7.81.0-1ubuntu1.4) ...
+Selecting previously unselected package curl.
+Preparing to unpack .../12-curl_7.81.0-1ubuntu1.4_amd64.deb ...
+Unpacking curl (7.81.0-1ubuntu1.4) ...
+Selecting previously unselected package libldap-common.
+Preparing to unpack .../13-libldap-common_2.5.13+dfsg-0ubuntu0.22.04.1_all.deb ...
+Unpacking libldap-common (2.5.13+dfsg-0ubuntu0.22.04.1) ...
+Selecting previously unselected package libsasl2-modules:amd64.
+Preparing to unpack .../14-libsasl2-modules_2.1.27+dfsg2-3ubuntu1_amd64.deb ...
+Unpacking libsasl2-modules:amd64 (2.1.27+dfsg2-3ubuntu1) ...
+Setting up libpsl5:amd64 (0.21.0-1.2build2) ...
+Setting up libbrotli1:amd64 (1.0.9-2build6) ...
+Setting up libsasl2-modules:amd64 (2.1.27+dfsg2-3ubuntu1) ...
+Setting up libnghttp2-14:amd64 (1.43.0-1build3) ...
+Setting up libldap-common (2.5.13+dfsg-0ubuntu0.22.04.1) ...
+Setting up libsasl2-modules-db:amd64 (2.1.27+dfsg2-3ubuntu1) ...
+Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2build4) ...
+Setting up libsasl2-2:amd64 (2.1.27+dfsg2-3ubuntu1) ...
+Setting up libssh-4:amd64 (0.9.6-2build1) ...
+Setting up openssl (3.0.2-0ubuntu1.6) ...
+Setting up publicsuffix (20211207.1025-1) ...
+Setting up libldap-2.5-0:amd64 (2.5.13+dfsg-0ubuntu0.22.04.1) ...
+Setting up ca-certificates (20211016) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 78.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.34.0 /usr/local/share/perl/5.34.0 /usr/lib/x86_64-linux-gnu/perl5/5.34 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.34 /usr/share/perl/5.34 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+debconf: falling back to frontend: Teletype
+Updating certificates in /etc/ssl/certs...
+127 added, 0 removed; done.
+Setting up libcurl4:amd64 (7.81.0-1ubuntu1.4) ...
+Setting up curl (7.81.0-1ubuntu1.4) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.1) ...
+Processing triggers for ca-certificates (20211016) ...
+Updating certificates in /etc/ssl/certs...
+0 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d...
+done.
+# apt install -y nodejs
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  javascript-common libc-ares2 libicu70 libjs-highlight.js libnode72 libuv1 nodejs-doc
+Suggested packages:
+  apache2 | lighttpd | httpd npm
+The following NEW packages will be installed:
+  javascript-common libc-ares2 libicu70 libjs-highlight.js libnode72 libuv1 nodejs nodejs-doc
+0 upgraded, 8 newly installed, 0 to remove and 8 not upgraded.
+Need to get 24.4 MB of archives.
+After this operation, 89.5 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 libicu70 amd64 70.1-2 [10.6 MB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy/main amd64 libuv1 amd64 1.43.0-1 [93.1 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy/main amd64 javascript-common all 11+nmu1 [5936 B]
+Get:4 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libjs-highlight.js all 9.18.5+dfsg1-1 [367 kB]
+Get:5 http://archive.ubuntu.com/ubuntu jammy/main amd64 libc-ares2 amd64 1.18.1-1build1 [44.9 kB]
+Get:6 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libnode72 amd64 12.22.9~dfsg-1ubuntu3 [10.8 MB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy/universe amd64 nodejs-doc all 12.22.9~dfsg-1ubuntu3 [2409 kB]
+Get:8 http://archive.ubuntu.com/ubuntu jammy/universe amd64 nodejs amd64 12.22.9~dfsg-1ubuntu3 [122 kB]
+Fetched 24.4 MB in 5s (5200 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package libicu70:amd64.
+(Reading database ... 5041 files and directories currently installed.)
+Preparing to unpack .../0-libicu70_70.1-2_amd64.deb ...
+Unpacking libicu70:amd64 (70.1-2) ..................................................................................................] 
+Selecting previously unselected package libuv1:amd64................................................................................] 
+Preparing to unpack .../1-libuv1_1.43.0-1_amd64.deb ...
+Unpacking libuv1:amd64 (1.43.0-1) ..................................................................................................] 
+Selecting previously unselected package javascript-common...........................................................................] 
+Preparing to unpack .../2-javascript-common_11+nmu1_all.deb ...
+Unpacking javascript-common (11+nmu1) ..............................................................................................] 
+Selecting previously unselected package libjs-highlight.js..........................................................................] 
+Preparing to unpack .../3-libjs-highlight.js_9.18.5+dfsg1-1_all.deb ...
+Unpacking libjs-highlight.js (9.18.5+dfsg1-1) ......................................................................................] 
+Selecting previously unselected package libc-ares2:amd64............................................................................] 
+Preparing to unpack .../4-libc-ares2_1.18.1-1build1_amd64.deb ...
+Unpacking libc-ares2:amd64 (1.18.1-1build1) ...##...................................................................................] 
+Selecting previously unselected package libnode72:amd64.............................................................................] 
+Preparing to unpack .../5-libnode72_12.22.9~dfsg-1ubuntu3_amd64.deb ...
+Unpacking libnode72:amd64 (12.22.9~dfsg-1ubuntu3) ...##.............................................................................] 
+Selecting previously unselected package nodejs-doc.########.........................................................................] 
+Preparing to unpack .../6-nodejs-doc_12.22.9~dfsg-1ubuntu3_all.deb ...
+Unpacking nodejs-doc (12.22.9~dfsg-1ubuntu3) ...##############......................................................................] 
+Selecting previously unselected package nodejs.###################..................................................................] 
+Preparing to unpack .../7-nodejs_12.22.9~dfsg-1ubuntu3_amd64.deb ...
+Unpacking nodejs (12.22.9~dfsg-1ubuntu3) ...#########################...............................................................] 
+Setting up javascript-common (11+nmu1) ...###############################...........................................................] 
+Setting up libc-ares2:amd64 (1.18.1-1build1) ...################################....................................................] 
+Setting up libuv1:amd64 (1.43.0-1) ...#################################################.............................................] 
+Setting up libjs-highlight.js (9.18.5+dfsg1-1) ...###########################################.......................................] 
+Setting up libicu70:amd64 (70.1-2) ...##############################################################................................] 
+Setting up libnode72:amd64 (12.22.9~dfsg-1ubuntu3) ...#####################################################.........................] 
+Setting up nodejs-doc (12.22.9~dfsg-1ubuntu3) ...#################################################################..................] 
+Setting up nodejs (12.22.9~dfsg-1ubuntu3) ...############################################################################...........] 
+update-alternatives: using /usr/bin/nodejs to provide /usr/bin/js (js) in auto mode##########################################.......] 
+update-alternatives: warning: skip creation of /usr/share/man/man1/js.1.gz because associated file /usr/share/man/man1/nodejs.1.gz (of link group js) doesn't exist
+Processing triggers for libc-bin (2.35-0ubuntu3.1) ...##########################################################################....] 
+# node /usr/src/index/app.js
+internal/modules/cjs/loader.js:818
+  throw err;
+  ^
+
+Error: Cannot find module '/usr/src/index/app.js'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:815:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:667:27)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)
+    at internal/main/run_main_module.js:17:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+# ls
+bin   dev  exercise12_3.txt  lib    lib64   media  opt root  sbin  sys  typescript  var
+boot  etc  home     lib32  libx32  mnt    proc  run   srv   tmp  usr
+# cd /usr/src/app
+# ls
+index.js
+# cd
+# ls
+# cd
+# ls
+# cd
+# ls
+# cd ..
+# ls
+bin   dev  exercise12_3.txt  lib    lib64   media  opt root  sbin  sys  typescript  var
+boot  etc  home     lib32  libx32  mnt    proc  run   srv   tmp  usr
+# node
+Welcome to Node.js v12.22.9.
+Type ".help" for more information.
+> .exit
+# node /usr/src/app/index.js
+Hello World
+# exit
+Script done.
+root@8851a0e8ecb9:/# ls
+bin   dev  exercise12_3.txt  lib    lib64   media  opt   root  sbin  sys  typescript  var
+boot  etc  home              lib32  libx32  mnt    proc  run   srv   tmp  usr
+root@8851a0e8ecb9:/# nano typescript
