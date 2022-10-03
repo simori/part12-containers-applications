@@ -6,7 +6,7 @@ COPY . .
 
 RUN npm install
 
-ENV REACT_APP_BACKEND_URL="http://localhost:3001"
+ENV REACT_APP_BACKEND_URL="http://localhost:3000/api/"
 
 ENV WATCHPACK_POLLING=true
 

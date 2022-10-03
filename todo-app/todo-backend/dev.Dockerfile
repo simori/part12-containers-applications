@@ -7,5 +7,6 @@ COPY . .
 RUN npm ci
 
 ENV WATCHPACK_POLLING=true
+ENV PORT=3001
 
 CMD ["npm", "run", "dev"]

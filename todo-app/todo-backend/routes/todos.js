@@ -9,7 +9,7 @@ let added_todos
 router.get('/', async (_, res) => {
   console.log('mongourli',MONGO_URL);
   console.log('redisurli',REDIS_URL);
-  console.log('getting some todos!');
+  console.log('getting some todos...');
   const todos = await Todo.find({})
   added_todos = todos.length
   // adding todos length to redis

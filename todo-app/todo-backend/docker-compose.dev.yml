@@ -12,5 +12,5 @@ services:
       - ./todo-backend/:/usr/src/app
     environment:
       - REDIS_URL redis://redis:6379
-      - MONGO_URL mongodb://the_username:the_password@mongo:3456/the_database
+      - MONGO_URL mongodb://the_username:the_password@mongo:27017/the_database
     container_name: todo-backend-dev

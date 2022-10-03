@@ -9,30 +9,55 @@ services:
       dockerfile: dev.Dockerfile # This will simply tell which dockerfile to read
     volumes:
       - ./todo-frontend/:/usr/src/app # The path can be relative, so ./ is enough to say "the same location as the docker-compose.yml"
-    ports:
-      - 3000:3000
+    #ports:
+    #  - 3000:3000
     container_name: todo-frontend-dev # This will name the container hello-front-dev
+    environment:
+      - REACT_APP_BACKEND_URL http://localhost:3000/api
+      - PORT 3000
+ 
   # todo-backend
   back:
     image: todo-backend-dev
     build:
       context: ./todo-backend
       dockerfile: dev.Dockerfile
-    ports:
-      - 3001:3001
+    #ports:
+    #  - 3001:3001
     volumes:
       - ./todo-backend/:/usr/src/app
     environment:
       - REDIS_URL redis://redis:6379
-      - MONGO_URL mongodb://the_username:the_password@mongo:3456/the_database
+      - MONGO_URL mongodb://the_username:the_password@mongo:27017/the_database
+      - PORT 3001
     container_name: todo-backend-dev
+
   nginx:
     image: nginx:1.20.1
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
     ports:
-      - 8080:80
+      - 3000:80
     container_name: reverse-proxy
     depends_on:
       - front # wait for the frontend container to be started
       - back
+  
+  redis:
+    image: redis
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes: # Declare the volume
+      - ./todo-backend/redis_data:/data
+  
+  mongo:
+    image: mongo
+    ports:
+      - 3456:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+      MONGO_INITDB_DATABASE: the_database
+    volumes: 
+      - ./todo-backend/mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js
+      - ./todo-backend/mongo_data:/data/db
+
