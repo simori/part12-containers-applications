@@ -7,7 +7,7 @@ let setAsync
 
 if (!REDIS_URL) {
   const redisIsDisabled = () => {
-    console.log('No REDIS_URL set, Redis is disabled')
+    console.log('No REDIS_URL set, Redis is disabled!')
     return null
   }
   getAsync = redisIsDisabled

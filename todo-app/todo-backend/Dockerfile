@@ -1,6 +1,6 @@
 FROM node:16
 
-WORKDIR /usr/src/app/ex12_5
+WORKDIR /usr/src/app
 
 COPY . .
 

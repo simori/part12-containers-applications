@@ -2,11 +2,14 @@ const express = require('express');
 const { Todo } = require('../mongo')
 const router = express.Router();
 const redis = require('../redis')
+const { MONGO_URL, REDIS_URL } = require('../util/config')
 
 let added_todos
 /* GET todos listing. */
 router.get('/', async (_, res) => {
-  console.log('getti');
+  console.log('mongourli',MONGO_URL);
+  console.log('redisurli',REDIS_URL);
+  console.log('getting some todos!');
   const todos = await Todo.find({})
   added_todos = todos.length
   // adding todos length to redis
