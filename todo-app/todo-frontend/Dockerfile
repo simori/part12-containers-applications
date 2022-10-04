@@ -8,6 +8,10 @@ RUN npm ci
 
 RUN CI=true npm test
 
-ENV REACT_APP_BACKEND_URL="http://localhost:3001/api/"
+RUN npm run build
+
+ENV REACT_APP_BACKEND_URL="http://localhost:3000/api/"
+
+ENV CHOKIDAR_USEPOLLING=true
 
 CMD npm start
