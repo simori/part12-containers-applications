@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  # frontend
+  front:
+    image: library-front-dev
+    build:
+      context: ./library-frontend # The context will pick this directory as the "build context"
+      dockerfile: dev.Dockerfile # This will simply tell which dockerfile to read
+    volumes:
+      - ./library-frontend/:/usr/src/app # The path can be relative, so ./ is enough to say "the same location as the docker-compose.yml"
+    ports:
+      - 3000:3000
+    container_name: library-frontend-dev # This will name the container
+    environment:
+      - REACT_APP_BACKEND_URL http://localhost:3000/api
+      - PORT 3000
+ 
+  # backend
+  back:
+    image: library-backend-dev
+    build:
+      context: ./library-backend
+      dockerfile: dev.Dockerfile
+    ports:
+      - 4000:4000
+    volumes:
+      - ./library-backend/:/usr/src/app
+
+    container_name: library-backend-dev
